@@ -3,7 +3,7 @@
     class="
       flex flex-col
       w-800px
-      h-300px
+      h-280px
       rounded-3xl
       bg-[var(--animate-bg-color)]
       overflow-hidden
@@ -51,8 +51,8 @@
         </button>
       </div>
     </div>
-    <!-- timeline -->
 
+    <!-- body -->
     <div class="w-full flex-1 px-5 min-h-100px">
       <div
         class="relative w-full h-full flex flex-row justify-center items-center"
@@ -250,17 +250,6 @@ const stopPlay = () => {
   cursor: pointer;
   animation: v-bind(scrubberAnimation);
   animation-play-state: v-bind(scrubberAnimationState);
-
-  outline: 2px dotted transparent;
-  outline-offset: -2px;
-  transition: outline 0.12s ease, outline-offset 0.12s ease;
-
-  &:hover {
-    outline: 2.5px dashed var(--primary-color) !important;
-    stroke-dashoffset: 12px;
-    outline-offset: 2px;
-    transition: outline 0.12s ease, outline-offset 0.12s ease;
-  }
 }
 .scrubber::before {
   content: '';
