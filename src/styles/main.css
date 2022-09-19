@@ -1,0 +1,30 @@
+body {
+  background: var(--main-background-image);
+}
+:root {
+  --primary-color: #4aa0ea;
+  --main-background-image: #080b1b;
+  /* 底部动画面板 */
+  --animate-bg-color: #141629;
+  --animate-text-color: #fff;
+  --box-shadow-color: #00000090;
+}
+
+button {
+  padding: 0;
+  background: transparent;
+  outline: 2px dotted transparent;
+  outline-offset: -2px;
+  transition: outline 0.12s ease, outline-offset 0.12s ease;
+}
+button:focus {
+  outline: 2.5px dashed var(--primary-color) !important;
+  stroke-dashoffset: 12px;
+  outline-offset: 2px;
+  transition: outline 0.12s ease, outline-offset 0.12s ease;
+  transform: scaleX(1.1) scaleY(1.1);
+}
+button:active {
+  outline: 2px dotted transparent;
+  transform: scaleX(1) scaleY(1);
+}
