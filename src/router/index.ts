@@ -4,8 +4,19 @@ import { createRouterGuard } from './guard';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () =>
-      import(/* webpackChunkName: "HelloWord" */ '../views/index.vue'),
+    component: () => import('../views/index.vue'),
+    name: 'HelloWord',
+    meta: { hidden: false, hasAuth: false },
+  },
+  {
+    path: '/timeline',
+    component: () => import('../views/timeline/index.vue'),
+    name: 'HelloWord',
+    meta: { hidden: false, hasAuth: false },
+  },
+  {
+    path: '/sortition',
+    component: () => import('../views/sortition/index.vue'),
     name: 'HelloWord',
     meta: { hidden: false, hasAuth: false },
   },
